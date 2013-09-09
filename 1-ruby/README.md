@@ -8,4 +8,7 @@ See: https://www.ruby-lang.org/en/downloads/
 - Linux - Debian & Ubuntu: sudo apt-get install ruby1.9.1
 
 # Sublime
-- SublimeLinter has ruby support 
+- SublimeLinter has Ruby support and SublimeText has basic Ruby support out of the box
+
+# Resources
+- Stack Overflow: http://stackoverflow.com/questions/tagged/ruby
