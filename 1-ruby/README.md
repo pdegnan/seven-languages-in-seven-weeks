@@ -12,3 +12,5 @@ See: https://www.ruby-lang.org/en/downloads/
 
 # Resources
 - Stack Overflow: http://stackoverflow.com/questions/tagged/ruby
+- Try Ruby: http://tryruby.org/levels/1/challenges/0
+- _why's (poignant) guide to Ruby: http://mislav.uniqpath.com/poignant-guide/
