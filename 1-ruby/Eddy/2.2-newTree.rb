@@ -5,15 +5,26 @@
 # courses, books, articles, and the like. Contact us if you are in doubt.
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/btlang for more book information.
+#
+# http://media.pragprog.com/titles/btlang/code/ruby/tree.rb
 #---
 class Tree
   attr_accessor :children, :node_name
   
-  def initialize(name, children=[])
-    @children = children
-    @node_name = name
+  def initialize(tree_hash={})
+    p tree_hash
+    @children = []
+    return if tree_hash.empty?
+    tree_hash.each {
+      |n,c|
+      @node_name = n
+      c.each { |nn, cc| t = Tree.new(cc); t.node_name = nn; @children << t }
+    }
   end
-  
+
+  def children(c)
+  end
+
   def visit_all(&block)
     visit &block
     children.each {|c| c.visit_all &block}
@@ -24,10 +35,15 @@ class Tree
   end
 end
 
-ruby_tree = Tree.new( "Ruby", 
-  [Tree.new("Reia"), 
-   Tree.new("MacRuby")] )
+#ruby_tree = Tree.new( "Ruby", 
+#  [Tree.new("Reia"), 
+#   Tree.new("MacRuby")] )
+family = {'grandpa' => { 'dad' => {'child 1' => {}, 'child 2' => {} }, 'uncle' => {'child 3' => {}, 'child 4' => {} } } }
+ruby_tree = Tree.new family
+p ruby_tree
 
+  ## Work in progress --- recursion can be a bitch sometimes
+exit
 puts "Visiting a node"
 ruby_tree.visit {|node| puts node.node_name}
 puts
