@@ -16,3 +16,4 @@ See readme at project root!
 - Erlang: the Movie: http://www.youtube.com/watch?v=xrIjfIjssLE (warning, contains stuff from the 80s)
 - Interview with Joe Armstrong: http://www.youtube.com/watch?v=m5RWdNBPsTY
 - Erlang in Production: http://www.youtube.com/watch?v=G0eBDWigORY
+- Try Erlang (interactive REPL): http://www.tryerlang.org/
