@@ -14,3 +14,4 @@ See: http://clojure.org/
 - Clojure site: http://clojure.org/
 - Stack Overflow: http://stackoverflow.com/questions/tagged/clojure
 - Brave Clojure: http://www.braveclojure.com/
+- Try Clojure (browser-based tour): http://tryclj.com/
