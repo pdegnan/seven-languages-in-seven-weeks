@@ -6,7 +6,7 @@ class Tree
         # of the subordinates argument which replaces the old children array argument.
         # Does it recursively to travel down a nested array.
         @children = []
-        subordinates.keys.each { |k| @children.push Tree.new(k, subordinates[k]) }
+        subordinates.keys.each { |k| @children << Tree.new(k, subordinates[k]) }
         @node_name = name
     end
     def visit_all(&block)
