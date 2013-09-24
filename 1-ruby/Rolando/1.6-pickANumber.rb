@@ -1,5 +1,4 @@
 def pick_a_number i, x
-
     # Get user's guess and turn it into an integer.
     # Non-valid integers return 0, which is an invalid guess.   
     u = gets.to_i
@@ -14,14 +13,12 @@ def pick_a_number i, x
         if u <= 0
             puts 'Invalid choice. Guess again:'
 
-        # Tell the user if that guess is high or low.
+        # Tell the user if the guess is high or low.
         else
-            g = 'low'
-            g = 'high' unless u < i
-            puts "You guessed too #{g}. Guess again:"
+            puts "You guessed too #{u > i ? 'high' : 'low'}. Guess again:"
         end
 
-        # Recursive FUNction.
+        # Call recursive FUNction.
         pick_a_number i, x + 1
     end
 end
