@@ -1,5 +1,3 @@
-i = 1
-10.times do
+for i in 1..11
     puts "This is sentence number #{i}"
-    i = i + 1
 end
