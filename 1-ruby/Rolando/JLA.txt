@@ -1,0 +1,8 @@
+first, last, age
+Bruce, Wayne, 39
+Clark, Kent, 35
+Diana, Price, 35
+Barry, Allen, 32
+Hal, Jordan, 29
+Arthur, Curry, 37
+John, Jones, 46
