@@ -16,3 +16,4 @@ See: http://www.haskell.org/platform/
 - Try Haskell: http://tryhaskell.org/
 - Learn You a Haskell for Great Good: http://learnyouahaskell.com/chapters
 - Running a startup on Haskell: http://www.youtube.com/watch?v=ZR3Jirqk6W8
+- History of Haskell https://www.youtube.com/watch?v=7NPBrWDzO2A 
