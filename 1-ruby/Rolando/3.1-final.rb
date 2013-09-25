@@ -17,7 +17,7 @@ module ActsAsCsv
     end
   end
   
-  module InstanceMethods   
+  module InstanceMethods
     def read
       @csv_contents = []
       filename = self.class.to_s.downcase + '.txt'
@@ -28,8 +28,14 @@ module ActsAsCsv
         @csv_contents << row.chomp.split(', ')
       end
     end
+    
+    attr_accessor :headers, :csv_contents
+    def initialize
+      read 
+    end
 
     def each &block
+      val = true
       @csv_contents.each do |row|
         col = 0
         obj = {}
@@ -39,14 +45,13 @@ module ActsAsCsv
         end
         block.call obj
       end
-
     end
-    
-    attr_accessor :headers, :csv_contents
-    def initialize
-      read 
-    end
+  end
+end
 
+class Hash
+  def method_missing name, *args
+    self[name.to_s]
   end
 end
 
@@ -57,7 +62,11 @@ end
 
 m = JLA.new
 puts
-m.each { |i| p i }
+m.each {|i| puts i.first_name}
+puts
+m.each {|i| puts i.last_name}
+puts
+m.each {|i| puts i.age}
 puts
 #puts m.headers.inspect
 #puts

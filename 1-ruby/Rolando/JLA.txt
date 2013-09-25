@@ -1,4 +1,4 @@
-first, last, age
+first_name, last_name, age
 Bruce, Wayne, 39
 Clark, Kent, 35
 Diana, Price, 35
