@@ -6,6 +6,20 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/btlang for more book information.
 #---
+
+# begin roshow: 
+# Create a new class from Hash, so that overriding method_missing
+# isn't too epic a pain. It also, inadvertantly, creates a new
+# type of Hash class which can use dot notation. Finally,
+# it has all the methods of Hash, so I can do that cool zip thing
+# with two arrays to makes one objects.
+
+class ModHash < Hash
+  def method_missing name
+    self[name.to_s]
+  end
+end
+
 module ActsAsCsv
   def self.included(base)
     base.extend ClassMethods
@@ -34,42 +48,28 @@ module ActsAsCsv
       read 
     end
 
+    # begin roshow: 
+    # each method to return an object for every row, where
+    # { column's header => row's value at this column } by using
+    # the super-awesome zip thing in the Hash object.
+
     def each &block
-      val = true
       @csv_contents.each do |row|
-        col = 0
-        obj = {}
-        row.each do |val|
-          obj[@headers[col]] = val 
-          col = col + 1
-        end
-        block.call obj
+        block.call ModHash[@headers.zip row] #super-awesome zip thing.
       end
     end
   end
 end
 
-class Hash
-  def method_missing name, *args
-    self[name.to_s]
-  end
-end
-
-class JLA  # no inheritance! You can mix it in
+class JLA 
   include ActsAsCsv
   acts_as_csv
 end
 
 m = JLA.new
 puts
+# begin roshow:
+# The goal syntax, in action:
 m.each {|i| puts i.first_name}
 puts
-m.each {|i| puts i.last_name}
-puts
-m.each {|i| puts i.age}
-puts
-#puts m.headers.inspect
-#puts
-#puts m.csv_contents.inspect
-#puts
 
