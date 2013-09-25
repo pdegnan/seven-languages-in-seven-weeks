@@ -12,6 +12,7 @@ begin # start a begin block
 	# ruby does method chaining very well
 	# This reads a line from STDIN, removes trailing LF
 	# and converts input to int for comparison
+	print "What number am I thinking about: "
 	guess = gets.chomp.to_i
 
 	print "Your guess is #{guess}, which is "
