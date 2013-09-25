@@ -10,9 +10,8 @@
 # begin roshow: 
 # Create a new class from Hash, so that overriding method_missing
 # isn't too epic a pain. It also, inadvertantly, creates a new
-# type of Hash class which can use dot notation. Finally,
-# it has all the methods of Hash, so I can do that cool zip thing
-# with two arrays to makes one objects.
+# type of Hash class with dot notation syntax. Finally,
+# it has all the methods of Hash, including the super-awesome zip.
 
 class ModHash < Hash
   def method_missing name
