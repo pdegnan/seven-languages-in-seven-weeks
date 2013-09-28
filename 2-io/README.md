@@ -8,7 +8,7 @@ See: http://iolanguage.org/
 - Linux - Debian & Ubuntu: sudo apt-get install iolanguage
 
 # Sublime
-- SublimeLinter has Ruby support and SublimeText has basic Ruby support out of the box
+- https://github.com/yangsu/sublime-io
 
 # Resources
 - http://iolanguage.org/
