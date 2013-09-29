@@ -17,3 +17,5 @@ See readme at project root!
 - Interview with Joe Armstrong: http://www.youtube.com/watch?v=m5RWdNBPsTY
 - Erlang in Production: http://www.youtube.com/watch?v=G0eBDWigORY
 - Try Erlang (interactive REPL): http://www.tryerlang.org/
+- Introduction To Erlang Types (slides): http://slides.sigma-star.com/view/Erlang%20Types
+- A Ninja-Quick Intro To Some Erlang Web Frameworks (slides): http://slides.sigma-star.com/view/Ninja-Erlang-Web
