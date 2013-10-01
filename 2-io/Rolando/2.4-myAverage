@@ -1,0 +1,14 @@
+List myAverage := method(
+    if (self size == 0) then ("There are no items in this list." println) else (
+        e := try(self average println)
+        e catch( "There's something non-numberic in this list (probably)." println)
+    )
+)
+
+list(4, 8, 15, 16, 23, 42 ) myAverage
+list() myAverage
+list("Jack", "Kate", "Sawyer", "Locke", "Walt", "Hurley") myAverage
+
+
+
+

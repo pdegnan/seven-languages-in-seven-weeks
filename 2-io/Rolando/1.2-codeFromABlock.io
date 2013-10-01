@@ -1,6 +1,8 @@
 Hawkeye := Object clone
-Hawkeye arrows := list("boomerang", "exploding", "net", "grappling hook", "bolo")
-Hawkeye attack := method(v, "Hawkeye shoots the #{v} arrow" interpolate println)
+Hawkeye arrows := list("boomerang", "exploding", "net")
+Hawkeye random_arrow := method(self arrows at (Random value(self arrows size)))
+Hawkeye attack := method("Hawkeye shoots the #{self random_arrow} arrow" interpolate println)
 
 clint := Hawkeye clone
-clint attack(clint arrows at (Random value(clint arrows size) floor))
+clint arrows = list("hookeye", "grappling hook", "bolo")
+clint attack

@@ -1,0 +1,15 @@
+List addLastTwo := method(self at(self size - 1) + self at(self size - 2))
+
+fib := Object clone
+fib seq := list(1,1)
+fib seq_extend := method(n, 
+    while (n > self seq size, 
+        self seq append(self seq addLastTwo)
+    )
+)
+fib nth := method(n, 
+    self seq_extend(n)
+    "#{n} Fibonacci number is: #{self seq at(n-1)}" interpolate println
+)
+
+fib nth(30)
