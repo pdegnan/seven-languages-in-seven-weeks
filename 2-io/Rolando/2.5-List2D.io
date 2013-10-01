@@ -29,4 +29,9 @@ batStuff println
 batStuff set("BATSIGNAL", 3, 2)
 batStuff get(3, 2) println
 
+f := File with("foo.txt)
+f remove
+f openForUpdating
+f write("hello world!")
+f close
 
