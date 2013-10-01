@@ -1,0 +1,2 @@
+list(list(0, 0, 0, 0, 0, 0, 0, 0), list(0, 0, 0, 0, 0, 0, 0, 0), list(0, 0, 0, 0, 0, 0, 0, 0), list(0, 0, BATSIGNAL, 0, 0, 0, 0, 0))
+and more stuff here

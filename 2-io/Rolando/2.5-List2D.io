@@ -29,9 +29,13 @@ batStuff println
 batStuff set("BATSIGNAL", 3, 2)
 batStuff get(3, 2) println
 
-f := File with("foo.txt)
+f := File with("save.txt")
 f remove
 f openForUpdating
-f write("hello world!")
+f write(batStuff asString)
+f write("\nand more stuff here")
 f close
+
+r := File with("read.txt")
+fromFile := r readLines at(0)
 
