@@ -1,0 +1,1 @@
+"You just ran an Io program from a file!" println
